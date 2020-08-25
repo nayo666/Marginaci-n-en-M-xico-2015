@@ -1,1 +1,1 @@
-
+Estos son los datos del índice de marginación municipal hecho centroides que se requieren para la regresión geográficamente ponderada, para bajar los datos municipales se puede ir a: http://www.conapo.gob.mx/es/CONAPO/Datos_Abiertos_del_Indice_de_Marginacion.
