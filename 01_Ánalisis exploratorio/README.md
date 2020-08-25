@@ -1,1 +1,2 @@
+Si aludimos a la marginación como un fenomeno multidimensional y estructural que se manifiesta como la falta de oportunidades y la desigual distribución del progreso en la estructura productiva (hecho que excluye a diversos grupos sociales). Se entiende que se comprometen los niveles de bienestar y la creación de capacidades, recursos y, por ende, el desarrollo, debido a que y de acuerdo con la CONAPO, "las desventajas  ocasionadas por la marginación son acumulables". 
 
