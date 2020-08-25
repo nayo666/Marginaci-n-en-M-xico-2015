@@ -1,1 +1,1 @@
-
+En la presente tarea se repasa la regresión geográficamente ponderada (GWR, por sus siglas en ingles), para observar relaciones de características de poblaciones vulnerables con el índice de marginación a nivel municipio de México en 2015.
