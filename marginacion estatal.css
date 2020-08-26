@@ -1,0 +1,16 @@
+#map {
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    background-color: black;
+  }
+  
+  #titulo {
+    text-align: center;
+    color: whitesmoke;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+/* con el 100% estamos diciendo que ese body del mapa va a abarcar todo el espacio o ventana de visualziacion del mapa */
+/* el simbolo de gato es para estilizar un id en este caso el de map si fuera para una clase seria con punto */
