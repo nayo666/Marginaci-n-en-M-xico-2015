@@ -1,0 +1,63 @@
+---
+title: "kriging"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 
+
+```{r cars}
+ library(ape)
+```
+
+## 
+
+```{r, echo=FALSE}
+plantas <-  read.csv("/home/noxd/Documents/BD MANANTLÁN.csv", sep=",", header=T, fileEncoding="latin1")
+head(plantas, n=10)
+```
+
+
+
+
+## 
+
+To calculate Moran’s I, we will need to generate a matrix of inverse distance weights.  In the matrix, entries for pairs of points that are close together are higher than for pairs of points that are far apart.  For simplicity, we will treat the latitude and longitude as values on a plane rather than on a sphere–our locations are close together and far from the poles. When using latitude and longitude coordinates from more distant locations, it’s wise to calculate distances based on spherical coordinates (the geosphere package can be used).
+
+We can first generate a distance matrix, then take inverse of the matrix values and replace the diagonal entries with zero:
+
+```{r, echo=FALSE}
+plantas.dists <- as.matrix(dist(cbind(plantas$Este, plantas$Norte)))
+
+plantas.dists.inv <- 1/plantas.dists
+diag(plantas.dists.inv) <- 0
+ 
+plantas.dists.inv[1:5, 1:5]
+
+```
+
+## 
+We have created a matrix where each off-diagonal entry [i, j] in the matrix is equal to 1/(distance between point i and point j). Note that this is just one of several ways in which we can calculate an inverse distance matrix.  This is the formulation used by Stata.  In SAS, inverse distance matrices have entries equal to 1/(1+ distance between point i and point j) and there are numerous scaling options available.
+
+
+
+```{r, echo=FALSE}
+Moran.I(plantas$N.Adultos, plantas.dists.inv,na.rm = TRUE)
+```
+Based on these results, we can reject the null hypothesis that there is zero spatial autocorrelation present in the variable Av8top at alpha = .05.
+
+
+```{r, echo=FALSE}
+Moran.I(plantas$N.Juveniles, plantas.dists.inv,na.rm = TRUE)
+```
+(los adultos tienen autocorrelación espacial, los jovenes no)
+
+##
+
+
+
+
+

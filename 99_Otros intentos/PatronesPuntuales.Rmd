@@ -1,0 +1,88 @@
+---
+title: "Patrones puntuales de muertes por COVID"
+author: "Leonardo CA"
+date: "15/8/2020"
+output:
+  html_document:
+    toc: true
+    theme: united
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Análisis de patrones puntuales
+
+El estudio de patrones puntuales se bas en el analisis de puntos distribuidos en el espacio. En este caso se útilizan puntos referentes a los municipios de México que tienen más de 100 muertes por cada 100,000 habitantes, para hacer hacer puntos de los municipios se tomaron los centroides de los mismos.
+
+## Carga y visualización de datos
+
+Los datos vienen de una fuente de la UNAM que estaba libre hasta hace unas semanas pero que ya restringieron con usuario y contraseña.
+
+Primero cargamos las librerias:
+
+
+```{r librerias}
+library(spatstat)
+library(sf)
+library(maptools)
+```
+
+
+Seguido cargamos los datos:
+
+```{r}
+#Shape de puntos a objeto point pattern process
+S <- st_read("/home/noxd/Doc/Geoinformatica/trabajofinal/BD.shp")
+#transformar datos a spatial points
+SP <- sf:::as_Spatial(S$geometry)
+CV <- as.ppp.SpatialPoints(SP)
+#En caso de que no desees utilizar la ventana rectangular(área de estudio)  que se crea por default puedes utilizar el siguiente polígono correspondiente al área ocupada por agebs urbanas en la ciudad.
+```
+Aquí tuve un problema, no pude agregar  el  polígono correspondiente a los límites territoriales de México o los municipios en los que se tienen los eventos porque se hacia raro el cálculo de la función G y se alentaba la misma, así que los puntos se ven:
+
+```{r }
+plot(CV)
+```
+
+
+## Cálculo de la función G
+
+Para estudiar el patrón de los COVID en México se calcula la función G, que calcula la distribución de distancias desde un punto arbitrario-aleatorio al evento más cercano. 
+
+```{r }
+#Para calcular la función G:
+envtux<- envelope(CV, fun=Gest, nrank=2, nsim=99)
+plot(envtux, main="G obs vs G teo para la vegetación")
+```
+
+La línea roja es el patrón aleatorio creado a partir de una distribución Poisson, la banda gris es la agregación de las simulaciones de los patrones aleatorios y la línea negra es el patrón observado.
+
+Se ve que los puntos observados se encuentran por encima de la banda de simulaciones, así como de el patrón aleatorio, por lo que podemos generalizar que existe un patrón de agrupaciones para los municipios que tienen un más de 100 muertes por cada 100,000 habitantes.
+
+
+## Densidad de Kernel
+
+
+La densidad de kernes da una idea de que tantos cambios de intensidad suceden en el área de estudio, en caso de que la distribución no sea uniforme, es facil de visualizar con el kernel. Tambien ayuda a observar fenomenos locales.
+
+
+Para hacerlo se basa en una función decreciente de difuminación y en el ancho de banda (distancia para llegar a la difuminación).
+
+
+
+
+```{r }
+#Para la estimación del Kernel:
+bw<- bw.diggle(CV) 
+bw<- as.numeric(bw)
+
+
+
+plot(density(CV,bw))
+points(CV, col="white", pch=21)
+```
+
+
+Se pueden observar los patrones mas aglumerados en el sur del pais.
