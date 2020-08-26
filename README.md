@@ -10,7 +10,7 @@ Este repositario contine información sobre el Índice de marginación municipal
 
 01_Analisis exploratorio --> Aquí se encuentra un archivo notebook con consultas a los datos para conocer su estructura y contenidos.
 
-02_Autocorrelación espacial --> Dentro de este folder se encuentra el archivo ipynb con el análisis para autocorrelación espacial del IMM mediante el índice de Moran global y local.
+02_Autocorrelación espacial --> Dentro de este folder se encuentra el archivo ipynb con el análisis para autocorrelación espacial del IMM mediante el índice de Moran global, local y LISA.
 
 03_Regresión geográficamente ponderada -->  En esta carpeta se encuentra todo lo que se relaciona con la Regresión geográficamente ponderada. La regresión es el indice de marginación contra la población que vive en localidades con menos de 5 mil personas, porcentaje de la población que gana menos de 2 salarios minimos y % pob sin educación primaria.
 
