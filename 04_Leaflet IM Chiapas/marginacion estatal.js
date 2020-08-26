@@ -1,4 +1,4 @@
-// Mandar llamar la petición de mapa de openstreetmap, vienen las coordenadas y luego el zoom en 8
+// Mandar llamar la petición de mapa de openstreetmap
 var map = L.map('map').setView([16.652539, -92.587429],8);
 L.tileLayer('http://a.tile.openstreetmap.org/{z}/{x}/{y}.png',{
   attribution: 'Map Data © OpenStreetMap contributors'
