@@ -4,5 +4,7 @@ Este repositario contine información sobre el Índice de marginación municipal
 
 Autores:
 Jorge Eduardo Cárdenas A.
+
 Leonardo Coronado Arvayo
+
 Jeziret Sahadi González Gallardo
