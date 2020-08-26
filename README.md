@@ -28,3 +28,12 @@ Jorge Eduardo Cárdenas A.
 Leonardo Coronado Arvayo
 
 Jeziret Sahadi González Gallardo
+
+
+## Referencias
+
+-CONAPO. Cartografía de marginación por municipio 2015. CONAPO. \url{http://www.conapo.gob.mx/es/CONAPO/Datos_Abiertos_del_Indice_de_Marginacion}
+-Binbin Lu , Martin Charlton , Paul Harris and A. Stewart Fotheringham (2013). Geographically weighted regression with a non-Euclidean distance metric: a case study using hedonic house price data. International Journal of Geographical Information Science.
+-Pérez Pineda, Jorge A.. (2006). Econometría espacial y ciencia regional. Investigación económica, 65(258), 129-160. Recuperado en 26 de agosto de 2020, de http://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S0185-16672006000400129&lng=es&tlng=es.
+-Yuji Murayama. Progress in Geospatial Analysis. Springer.
+-Wikipedia. Geographical distance [online] \url{https://en.wikipedia.org/wiki/Geographical_distance}
