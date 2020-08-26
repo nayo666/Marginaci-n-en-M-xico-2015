@@ -2,13 +2,7 @@
 Este repositario contine información sobre el Índice de marginación municipal de México para 2015, el analisis es espacial y de correlación.
 
 
-Autores:
 
-Jorge Eduardo Cárdenas A.
-
-Leonardo Coronado Arvayo
-
-Jeziret Sahadi González Gallardo
 
 
 ## Índice
@@ -25,3 +19,12 @@ Jeziret Sahadi González Gallardo
 05_Presentacion IM --> Presentación del proyecto.
 
 99_Otros intentos --> Esta carpeta contiene los archivos de una base de datos que se eligió al comienzo para desarrollar el trabajo final, sin embargo, optamos por cambiar el tema por falta de estructura en los datos. En resumen, la DB hablaba sobre la depredación pre-dispersión de semillas por insectos endófitos de seis especies arbóreas en la Sierra de Manantlán, donde se estimó la variación entre poblaciones en (1) la frecuencia y densidad de depredación, (2) su relación con el tamaño y contenido de nutrientes de las semillas y (3) el efecto de la infestación en la geminación. Para ello seleccionaron tres especies pertenecientes al género Quercus (Q. nixoniana, Q. acutifolia y Q. praineana) y tres especies arbóreas del bosque mesófilo de montaña (Styrax ramirezii, Citharexylum mocinnoi y Persea hintonii).
+
+
+## Autores:
+
+Jorge Eduardo Cárdenas A.
+
+Leonardo Coronado Arvayo
+
+Jeziret Sahadi González Gallardo
